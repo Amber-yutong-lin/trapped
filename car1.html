@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Trapped</title>
+  <link rel="icon" href="media/images/icon.png"/>
+  <link rel="stylesheet" type="text/css" href="css/car1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="bg">
+  <div id="typedtext"></div>
+      
+       <div ><p id="myBtn" style="color:white">[You've recieved a video. Click here to view]</p></div>
+      <div id="myModal" class="modal">
+  <!-- Modal content -->
+       <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <video id="catt" preload><source src="media/videos/drunk.mp4" type="video/mp4"></video>
+  </div>
+
+  </div>
+       	
+    	<a href="car1-2.html"><button id="button_1">Listen Closely to the Old Man</button></a>
+    
+  	</div>
+
+ <script src="java/car1.js"></script>
+ <script>
+ var modal = document.getElementById('myModal');
+var vid =  document.getElementById('catt');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+    vid.play();
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+     vid.pause();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+ 
+</body>
+</html>

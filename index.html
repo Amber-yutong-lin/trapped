@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Trapped</title>
+  <link rel="icon" href="media/images/icon.png"/>
+
+<style>
+
+@font-face {
+  font-family: "blood";
+  src: url(media/font/youmurdererbb_reg.otf) format("truetype");
+}
+
+body {  
+margin:0px;
+border:0px;
+padding:0px;     
+}
+
+
+
+.text{
+    position: absolute;
+    top:30%;
+    right:25%;
+    z-index: 10;
+    font-family:'blood';
+    text-shadow: 3px 5px black;
+    color: #ffffff;
+    font-size: 300px;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+   animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+.text:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.open{
+    z-index:-1;  
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    width: 100%; 
+    min-height: 100%;  
+}   
+</style>
+</head>
+
+
+<body>
+
+<a href="intro.html" target="_blank"><p1 id="text"  class="text" onmouseover="myFunction()" onmouseout="myFunction1()">Trapped</p1></a>
+
+
+<video id="open" class="open" preload muted> <source src="media/videos/scary.mp4" type="video/mp4">
+</video>
+
+
+
+<div id="hellotext">
+<audio autoplay loop> <source src="media/audios/back.mp3" type="audio/mp3" ></audio>
+<audio preload id="radio"> <source src="media/audios/radio.mp3" type="audio/mp3" ></audio>
+</div>
+</body>
+
+<script type="text/javascript">
+    var vid = document.getElementById("open"); 
+    var radio = document.getElementById("radio"); 
+    
+    function myFunction(){
+        
+        vid.play();
+        radio.play();
+        
+     };
+
+     function myFunction1(){
+     	
+         
+         vid.pause();
+         radio.pause();
+        
+    }
+</script>
+</html>

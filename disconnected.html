@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<title>Ending</title>
+<style>
+body{
+	background: black;
+}
+p{
+	font-size:80px;
+	font-family:courier;
+	text-align: center;
+	color:rgb(0,255,0);
+	position:relative;
+	margin:auto;
+	top:250px;
+}
+#button_1{
+    display: inline-block;
+    float: left;
+    background-color: #000;
+    border: 2px solid lime;
+    font-family: "Courier";
+    border-radius: 4px;
+    color: lime;
+    font-size: 30px;
+    margin-left: 40%;
+    margin-top: 34%;
+    width: 20%;
+    height: 80px;
+}
+</style>
+</head>
+<body>
+<audio src="media/audios/signal.mp3" autoplay loop></audio>
+<p>[Disconnected]</p>
+<a href="index.html"><button id="button_1">Homepage</button></a>
+<script>
+setTimeout(function() 
+{ 
+    document.getElementById("myDiv").style.display = "none"; 
+}, 
+3000);
+
+</script>
+</body>
