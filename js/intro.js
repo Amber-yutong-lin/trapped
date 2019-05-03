@@ -1,17 +1,17 @@
 $(document).ready(function() {
     $("#button_1").hide();
 	$("#button_2").hide();
-    
+
     $("#button_1").delay(23000).fadeIn(500);
     $("#button_2").delay(23000).fadeIn(500);
 });
 
 //context
 var aText = new Array(
-">...ello?", 
+">...ello?",
 ">...nybody there???",
 " ",
-">...ings are ...etting pr...ty wierd...",
+">...ings are ...etting pr...ty weird...",
 " ",
 ">... you ... me?",
 ">......",
@@ -22,20 +22,20 @@ var aText = new Array(
 );
 
 
-var iSpeed = 80; 
-var iIndex = 0; 
-var iArrLength = aText[0].length; 
-var iScrollAt = 20; 
-var iTextPos = 0; 
-var sContents = ''; 
-var iRow; 
- 
+var iSpeed = 80;
+var iIndex = 0;
+var iArrLength = aText[0].length;
+var iScrollAt = 20;
+var iTextPos = 0;
+var sContents = '';
+var iRow;
+
 function typewriter()
 {
  sContents =  ' ';
  iRow = Math.max(0, iIndex-iScrollAt);
  var destination = document.getElementById("typedtext");
- 
+
  while ( iRow < iIndex ) {
   sContents += aText[iRow++] + '<br />';
  }
